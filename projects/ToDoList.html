@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<style>
+    *{
+        margin:0;
+        padding:0;
+        box-sizing:border-box ;
+        font-family:Verdana, Geneva, Tahoma, sans-serif;
+    }
+    body{
+        display:flex;
+        height:100vh;
+        justify-content:center;
+        align-items:center;
+        background-color: rgb(12, 12, 33);
+    }
+    .container{
+        width:40%;
+        min-width:350px;
+        background-color:white;
+        max-height:100%;
+        border-radius:10px;
+        box-shadow:0px 0px 10px rgba(0,0,0,0.5);
+    }
+    #newtask{
+        position:relative;
+        padding:30px 20px;
+        display:flex;
+        justify-content:space-between;
+    }
+    #add{
+        width:20%;
+        height:35px;
+        border-radius:5px;
+        font-weight:500;
+        background-color:blueviolet;
+        border:none;
+        cursor:pointer;
+        outline:none;
+        border:none;
+
+    }
+    #tasklist{
+        margin-bottom:9px;
+        padding:10px 20px;
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        width:100%;
+    }
+    .task{
+        display:flex;
+        justify-content: space-between;
+        align-items:center;
+        background-color: gray;
+        height: 45px;
+        margin-bottom:9px;
+        padding:5px 10px;
+        cursor:pointer;
+        width:100%;
+        border-radius:5px;
+        border:1px solid grey;
+
+    }
+    .del{
+        color:rgb(146, 25, 25);
+        border-radius:5px;
+        border:none;
+        background:none;
+        cursor:pointer;
+        outline: none;
+    }
+</style>
+<body>
+    <div class="container">
+        <div id="newtask">
+            <input type="text" id="taskinfo" placeholder="Task to do.........">
+            <button id="add">Add</button>
+        </div>
+        <div id="tasklist"></div>
+    </div>
+
+    <script>
+        let todoele=document.getElementById("taskinfo")
+        let tasklist=document.getElementById("tasklist")
+        document.getElementById("add").onclick=function(){
+            if(todoele.value.length==0){
+                alert("Enter task details")
+            }
+            else{
+                tasklist.innerHTML=tasklist.innerHTML+
+                `<div class="task">
+                    <span id="work">${todoele.value}</span>
+                    <button class="del"><i class="fa fa-trash"></i></button>
+                </div>`;
+                let alltasks=document.querySelectorAll(".del")
+                for(let i=0;i<alltasks.length;i++){
+                    alltasks[i].onclick=function(){
+                        this.parentNode.remove()
+                    }
+                }
+                todoele.value=""
+            }
+        }
+    </script>
+    
+</body>
+</html>

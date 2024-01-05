@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=he, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.0/css/font-awesome.css" integrity="sha512-CB+XYxRC7cXZqO/8cP3V+ve2+6g6ynOnvJD6p4E4y3+wwkScH9qEOla+BTHzcwB4xKgvWn816Iv0io5l3rAOBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Document</title>
+</head>
+<style>
+    *{
+        margin:0px;
+    }
+    header{
+        width:100%;
+        height:120px;
+        background-color: rgb(102, 102, 244);
+       
+    }
+    .nav{
+        display:flex;
+        flex-direction:row-reverse;  
+        margin:2px; 
+    }
+    button{
+        background-color: rgb(102, 102, 244);
+        margin-top:-100px;
+        padding:5px;
+        border:none;
+        border-radius:15px;
+        font-size:medium;   
+    }
+    button:hover{
+        color:crimson;
+    }
+    section{
+        width:100%;
+        height:700px;
+        background-image: url(https://store.dji.com/guides/wp-content/uploads/2019/04/Creating-a-Sense-of-Depth-With-Aerial-Photos-12.jpg);
+        background-repeat: no-repeat;
+        
+    }  
+    section .box{
+        position: relative;
+        left:900px;
+        top:80px;
+        border:solid 2px white;
+        border-radius: 20px;
+        width:500px;
+        height:500px;
+        filter:saturate(10%);
+        filter:drop-shadow(3px 2px 3px red);
+        padding:20px;
+    }
+    h1{
+        font-size:30px;
+        color:white;
+        text-align:center;
+    }
+    .page{
+       position:absolute;
+       top:300px;
+       justify-content:flex-end;
+       width:800px;
+       font-size:20px;
+       color:white;
+    }
+    label{
+        color:white;
+        font-size:30px;
+    }
+    input[type="text"]{
+        width:450px;
+        height:30px;
+        border-radius: 30px;
+        padding-left:30px;
+        
+    }
+    input[type="date"]{
+        width:200px;
+        height:30px;
+        border-radius: 30px;  
+    }
+    input[type="number"]{
+        width:200px;
+        height:30px;
+        border-radius: 30px;  
+    }
+    .ch-o{
+        margin-left:300px;
+        margin-top:-175px;
+    }
+    #search{
+        width:50%;
+        height:50px;
+        padding:5px;
+        background-color: yellow;
+        margin-left:150px;
+        margin-top:50px;
+    }
+    .flex-container{
+            display:flex;
+            flex-direction:row;
+            justify-content:space-around;
+            align-items:flex-start;  
+            
+        }
+        .flex-container div{
+            width:100px;
+            height:250px;
+            padding:10px;
+            margin:10px;
+            font-size:20px;
+            
+        }
+        .flex-container div:hover{
+            color:crimson;
+        }
+        .flex-container img{
+            width:300px;
+            height:300px;
+            border:solid blue 2px;
+            border-radius: 10px;
+        }
+        footer{
+        
+        width:100%;
+        height:270px;
+        background:rgb(23, 20, 20);
+        margin-top: 180px;
+        margin-left:10px;
+        color:aliceblue;
+        font-size:20px;
+        padding:3px;
+
+     }
+     footer h1{
+        text-align:left;
+     }
+     footer .ft-1{
+        float: left;
+        flex-direction: row-reverse;
+        margin-left:1000px;
+        margin-top: -160px;
+     }
+     footer .ft-2{
+        float: left;
+        flex-direction: row-reverse;
+        margin-left:1200px;
+        margin-top: -180px;
+     }
+    
+</style>
+<body>
+    <header>
+        <img src="https://tourism.ap.gov.in/assets/img/aptdc-new-logo-cl.png" alt=""> 
+        <div class="nav">
+        <button ><i class="fa fa-lock">LOGIN</i></button>
+        <button >CONTACT</button>
+        <button >MANGING BOOK</button>
+        <button >BOATING CONTROL ROOM</button>
+        <button >TOURISM PACKAGES</button>
+        <button >ACCOMMDATIONS</button>
+        </div>
+    </header>
+    <section>
+        <div class="page">
+            <h1>IN THE LAP OF NATURE</h1> <br>
+            <p>Eco-tourism is a conscious effort for a socially responsible travel experience while making the most of the natural surroundings.
+                 With a purpose to support conservation, environment sustainability and the well-being of the local communities and wild</p>
+        </div>
+        <!-- --------------------------------------------------box -->
+       <div class="box">
+        <h1>Hotel Booking in APTDC</h1> <br> <hr> <br>
+        <label>DESTINATION</label> <br> <br> 
+        <input type="text"placeholder="selct destination"> <br> <br>
+        <label>CHECK IN</label> <br> <br>
+        <input type="date"> <br> <br>
+        <label>ADULTS</label> <br>
+        <input type="number">
+        <div class="ch-o">
+        <label>CHECK OUT</label> <br> <br>
+        <input type="date"> <br> <br>
+        <label>CHILDS</label>
+        <input type="number">
+        </div> 
+        <button id="search"><i class="fa fa-search">Search Now</i></button>
+       </div>
+    </section>
+   <!-- ------------------------------------------------------------article -->
+    <article>
+      <p style="font-size:30px; font-weight:300px;font-style:bold;">Accommdations</p>
+        <div class="flex-container">
+        <div class="one"><img src="https://media.designcafe.com/wp-content/uploads/2019/12/17054728/pick-out-the-bed-wall-for-bedroom-design-2.jpg">TYDA,HARITHA JUNGLEBELLS, <br>VIJAYAWADA </div><br>
+        <div class="two"><img src="https://aptourismhotels.in/aptdc-haritha-hotel/assets/images/ananthagiri-788x526.jpg">ARRAKU HARITHAHOTEL  <br>OOTY</div><br>
+        <div class="three"><img src="https://i0.wp.com/www.tourismadvisor.in/wp-content/uploads/2022/05/Mypadu-Haritha-Beach-Resort-Front-View.jpg?w=500&ssl=1">ANTHAGIRI HARITHA&nbsp;HOTEL,<br>ARKU</div><br> <br> <br>
+        <div class="four"><img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1a/7d/d5/1d/bhavani-island-resort.jpg?w=700&h=-1&s=1">BHAVANI ISLANDRESORT NELLORE</div><br>
+       
+    </article>
+<!-- ------------------------------------------------------------footer -->
+    <footer>
+        <h1>About</h1> 
+       <br> <p><blockquote>Andhra Pradesh Tourism Development Corporation (APTDC) has built an impressive infrastructure:hotels,<br> resorts, transport fleet and amenities to promote an array of tourist activity. 
+            Excellent facilities that offer value <br> for money includes hotels and resorts, wayside amenities, transport, information & reservation centers/kiosks,<br>culturally vibrant sound & light shows,
+             leisure boating, pleasure cruises with facilities such as conferencing and <br>catering, and above all a journey of heritage discovery.</blockquote></p> <vr>
+             <div class="ft-1">
+                <ul><p>BOOK NOW</p> <br>
+                    <li>Hotels</li>
+                    <li>Tour package</li>
+                    <li>Private Policy</li>
+                    <li>Terms & Conditions</li>
+                    <li>Tenders</li>
+                    <li>Vaccancies</li>
+                    </ul>
+             </div>
+             <div class="ft-2">
+                <ul><p>TOURISM ATTRACTIONS</p> <br>
+                    <li>Araku Haritha Restuarents</li>
+                    <li>risikinda beach</li>
+                    <li>Araku Borra caves</li>
+                    <li>Horsley Hills</li>
+                    <li>Pallakondalu</li>
+                    <li>Papikondallu</li>
+                    </ul> <br>
+                    <p>Media Patners</p>
+                    <i class="fa fa-whatsapp"></i>
+                    <i class="fa fa-facebook"></i>
+                    <i class="fa fa-instagram"></i>
+             </div>
+    </footer>  
+</body>
+</html>
